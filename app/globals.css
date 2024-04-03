@@ -70,7 +70,20 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .slanted-top {
+    clip-path: polygon(0 15%, 100% 6%, 100% 100%, 0 100%);
+  }
+
+  .slanted-bottom {
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .slanted-both {
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
   }
 }
