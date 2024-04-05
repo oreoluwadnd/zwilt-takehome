@@ -1,47 +1,158 @@
-import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-import { ArrowRightIcon, CheckCircle } from "lucide-react";
-import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+// import { Input } from "@/components/ui/input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { ArrowRightIcon } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="w-full py-4 md:py-10 lg:py-10 xl:py-10">
-      <div className="container px-4 md:px-6 flex justify-center">
-        <div className=" max-w-4xl flex flex-col items-center space-y-8">
-          <div className="flex ">
-            <h1 className="text-5xl font-bold">Finding the right fit&nbsp;</h1>
-            <div className="flex items-center">
-              <Image
-                src="/avatar.png"
-                alt="Person Icon"
-                width={90}
-                height={90}
-                className="mr-4"
-              />
-              <p className="text-5xl font-bold">has</p>
-            </div>
-            <p className="text-5xl font-bold">never been easier.</p>
-          </div>
+    <section>
+      <div className="mt-36 relative container px-4 md:px-6">
+        <h1 className="max-w-2xl mx-auto text-[3.375rem] text-center tracking-tight font-bold leading-[1.185em]">
+          <span>Finding the right fit</span>{" "}
+          <span className="inline-flex items-center">
+            <Image src="/gif.gif" alt="Person Icon" width={68} height={43} />
+          </span>
+          <span className="inline-block">has</span>
+          <span>never been easier.</span>
+        </h1>
 
-          <div className="bg-white flex-col p-5 shadow-lg rounded-lg  flex space-x-4 mt-4  border border-slate-200 ">
-            {/* <div className="flex flex-col md:flex-row w-full gap-2">
-              <Input
-                type="email"
-                className="text-lg focus:ring-blue-500 focus:ring-offset-red-500 focus:shadow-md focus:outline-none focus:ring-offset-2 "
-                placeholder="your@email.com"
-              />
-              <Button
-                variant="default"
-                className="bg-[#E63E21]  hover:opacity-80 hover:bg-[#ff5233] text-white"
-              >
-                Start my free month
-                <ArrowRightIcon className="w-6 h-6 ml-1" />
-              </Button>
-            </div> */}
-          </div>
+        <p className="max-w-xl mx-auto mt-5 text-center text-[1.375rem] leading-[32px]">
+          With our rigorous pre-vetting process, you&apos;ll never have to worry
+          about finding the ideal candidate ever again.
+        </p>
+        <div className="mt-10 relative h-20 mx-auto max-w-xl pt-4 pb-8 ">
+          <Input className="h-14 text-lg" />
+          <span className="absolute cursor-pointer flex rounded-xl items-center justify-center h-14 w-14  bg-[#FFBE2E] right-0 top-4">
+            <Image
+              src="/blackvector.png"
+              className="object-contain"
+              alt="Person Icon"
+              width={40}
+              height={40}
+            />
+          </span>
+        </div>
+
+        <div className="mt-10 mx-auto max-w-4xl pt-4 pb-8 rounded-2xl bg-[#F8F8F8]">
+          <Tabs
+            defaultValue="development"
+            className="w-full flex flex-col justify-center items-center"
+          >
+            <TabsList className="">
+              <TabsTrigger value="development">IT & Development</TabsTrigger>
+              <TabsTrigger value="design">Design and Creative</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="development" className="mt-6 w-full">
+              <div className="grid grid-cols-3 w-full">
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    MERN Stack Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Full Stack Developer
+                  </Link>
+                </div>
+
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Data Scientist
+                  </Link>
+                  <Link className="block" href="/">
+                    Front End Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                </div>
+
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Full Stack Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="design" className="mt-6 w-full">
+              <div className="grid grid-cols-3 w-full">
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    MERN Stack Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Full Stack Developer
+                  </Link>
+                </div>
+
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Data Scientist
+                  </Link>
+                  <Link className="block" href="/">
+                    Front End Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                </div>
+
+                <div className="col-span-1 justify-self-center space-y-4">
+                  <Link className="block" href="/">
+                    Shopify Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Python Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Full Stack Developer
+                  </Link>
+                  <Link className="block" href="/">
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+        <div className="h-32 mt-20 -skew-y-[2deg] relative w-full ">
+          <Image
+            src="/union.png"
+            alt="hero-image"
+            fill
+            className="object-contain w-full h-full"
+          />
         </div>
       </div>
     </section>

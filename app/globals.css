@@ -76,14 +76,21 @@
   }
 
   .slanted-top {
-    clip-path: polygon(0 15%, 100% 6%, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   }
 
   .slanted-bottom {
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
 
   .slanted-both {
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 91%, 0 100%);
   }
+
+  .slanted-edge {
+    /* clip-path: polygon(0 10%, 89% 0, 100% 100%, 0 76%); */
+    border: 2px solid red !
+  }
+
+
 }
