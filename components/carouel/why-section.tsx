@@ -17,7 +17,7 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
-const options: EmblaOptionsType = { dragFree: true, loop: true };
+const options: EmblaOptionsType = { dragFree: false, loop: true };
 const SLIDE_COUNT = 5;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 
@@ -52,7 +52,7 @@ export default function CarouselSection() {
     <section>
       <div className="pl-14 py-44 -mt-24 bg-gradient-to-t from-[#D8D2FF]/50 flex flex-col relative gap-16 container">
         <div className="flex w-full">
-          <div className="flex w-1/2 v flex-col gap-9">
+          <div className="flex w-[40%] justify-center flex-col gap-9">
             <h1 className="max-w-96 text-black text-[3.375rem] tracking-tight font-bold leading-[1.185em]">
               Why choose Zwilt?
             </h1>
@@ -61,23 +61,141 @@ export default function CarouselSection() {
               you to the world’s highly qualified talent pool.
             </p>
           </div>
-          <div className="flex w-full justify-center">
-            <div className="shadow-2xl w-full">
-              <div className="overflow-hidden w-full" ref={emblaRef}>
-                <div className="flex touch-pan-y w-full ml--1">
-                  {slides.map((index) => (
-                    <div
-                      className="flex-none flex-shrink-0 w-full min-w-0 "
-                      key={index}
-                    >
-                      <div className="box-border shadow-inner bg-gray-700 rounded-full text-4xl font-semibold flex items-center h-19">
-                        {index + 1}
-                      </div>
+          <div className="w-[60%] justify-center">
+            <div className="overflow-hidden  rounded-sm w-full" ref={emblaRef}>
+              <div className="flex touch-pan-y w-full ml--1">
+                <div className="flex-none gap-2 flex-shrink-0 w-full min-w-0 ">
+                  <div className=" shadow-xl rounded-md ml-2 bg-white p-14 font-semibold flex items-center h-[652px]">
+                    <div className="flex mt-4 flex-col gap-4">
+                      <h1 className="max-w-96 text-black text-[3.375rem] tracking-tight font-bold leading-[1.185em]">
+                        Onboard without the risk.
+                      </h1>
+                      <ul className="flex flex-col gap-4">
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            We pick the best for you to select.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Thousands of vetted candidates in dozens of{" "}
+                            <br></br>
+                            categories. Risk-free resource swapping for the best
+                            fit.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w- bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Risk-free resource swapping for the best fit.
+                          </p>
+                        </li>
+                      </ul>
                     </div>
-                  ))}
+                    <div className="relative  h-full w-full">
+                      <Image
+                        src="/carosuel.png"
+                        alt="onboard"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-none gap-2 flex-shrink-0 w-full min-w-0 ">
+                  <div className=" shadow-xl rounded-md ml-2 bg-white p-14 font-semibold flex items-center h-[652px]">
+                    <div className="flex mt-4 flex-col gap-4">
+                      <h1 className="max-w-96 text-black text-[3.375rem] tracking-tight font-bold leading-[1.185em]">
+                        Onboard without the risk.
+                      </h1>
+                      <ul className="flex flex-col gap-4">
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            We pick the best for you to select.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Thousands of vetted candidates in dozens of{" "}
+                            <br></br>
+                            categories. Risk-free resource swapping for the best
+                            fit.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w- bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Risk-free resource swapping for the best fit.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="relative  h-full w-full">
+                      <Image
+                        src="/carousel2.png"
+                        alt="onboard"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-none gap-2 flex-shrink-0 w-full min-w-0 ">
+                  <div className=" shadow-xl rounded-md ml-2 bg-white p-14 font-semibold flex items-center h-[652px]">
+                    <div className="flex mt-4 flex-col gap-4">
+                      <h1 className="max-w-96 text-black text-[3.375rem] tracking-tight font-bold leading-[1.185em]">
+                        Onboard without the risk.
+                      </h1>
+                      <ul className="flex flex-col gap-4">
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-96 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">Stay in the loop.</p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Thousands of vetted candidates in dozens of{" "}
+                            <br></br>
+                            categories. Risk-free resource swapping for the best
+                            fit.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="h-2 max-w-72 bg-[#50589F] rounded-lg w-4" />
+                          <p className="text-sm">
+                            Risk-free resource swapping for the best fit.
+                          </p>
+                        </li>
+                        <li className="flex items-center  gap-2">
+                          <div className="cursor-pointer">
+                            <Image
+                              src="/footimage.png"
+                              alt="Person Icon"
+                              width={60}
+                              height={60}
+                              className="mr-4"
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="relative  h-full w-full">
+                      <Image
+                        src="/carousel3.png"
+                        alt="onboard"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-              {/* 
+            </div>
+            {/* 
               <div className="grid grid-cols-[auto , 1fr] justify-between gap-4">
                 <div className="grid grid-col-2 gap-2 items-center">
                   <PrevButton
@@ -105,9 +223,7 @@ export default function CarouselSection() {
                   ))}
                 </div>
               </div> */}
-              {/* </section> */}
-              <div className=" shadow-2xl  border-2 border-[#F2F4F8] w-96 h-96"></div>
-            </div>
+            {/* </section> */}
           </div>
         </div>
       </div>
