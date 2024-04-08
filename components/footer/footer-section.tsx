@@ -5,8 +5,8 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
   return (
-    <section className="w-full container">
-      <div className="bg-gradient-to-b pt-36  from-[#0C0C0C]/100 to-[#0C0C0C]/95 w-full ">
+    <section className="w-full slanted-top -mt-24  container">
+      <div className="bg-gradient-to-b pt-36   from-[#0C0C0C]/100 to-[#0C0C0C]/95 w-full ">
         <div className="px-12">
           <div className="slanted-both justify-center items-center flex bg-[#525AA0]">
             <div className="max-w-3xl py-28 gap-4 items-center flex flex-col text-white text-4xl font-bold text-center">
